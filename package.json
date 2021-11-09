@@ -1,0 +1,34 @@
+{
+  "name": "wasmer-cri-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wasmer cri impl by JavaScript.",
+  "main": "",
+  "scripts": {
+    "generate:types": "proto-loader-gen-types --includeDirs=protobuf --outDir=types --grpcLib=@grpc/grpc-js 'kubernetes/cri-api/pkg/apis/runtime/v1alpha2/api.proto'",
+    "dev": "tsc -b ./ -w",
+    "build": "tsc -b ./",
+    "client": "node dist/client.js",
+    "server": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeasonstudio/wasmer-cri-js.git"
+  },
+  "keywords": [],
+  "author": "Jeason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeasonstudio/wasmer-cri-js/issues"
+  },
+  "homepage": "https://github.com/jeasonstudio/wasmer-cri-js#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.4.4",
+    "@grpc/proto-loader": "^0.6.6",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "esno": "^0.12.0"
+  }
+}

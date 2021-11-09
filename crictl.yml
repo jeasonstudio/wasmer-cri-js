@@ -1,0 +1,5 @@
+runtime-endpoint: unix:///tmp/wasmer.sock
+image-endpoint: unix:///tmp/wasmer.sock
+timeout: 2
+debug: true
+pull-image-on-create: false
